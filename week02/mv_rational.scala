@@ -1,3 +1,5 @@
+package funcprog.week02
+
 import math.abs
 
 class Rational(x: Int, y: Int) {
@@ -21,9 +23,14 @@ class Rational(x: Int, y: Int) {
 
 	def * (i: Int) = new Rational( i*this.num, this.den )
 }
-	
-val x = new Rational(1,2)
 
-val y = new Rational(1,2)
+object TestRational {
 
-println( x*x*x - y*3 )
+    def main(args: Array[String]) = {
+        val x = new Rational(1,2)
+
+        val y = new Rational(1,2)
+
+        println( x*x*x - y*3 )
+    }
+}

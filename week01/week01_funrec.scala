@@ -1,4 +1,5 @@
-package recfun
+package funcprog.week01
+
 import common._
 
 object Main {

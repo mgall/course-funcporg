@@ -1,3 +1,4 @@
+package funcprog.week03
 
 abstract class IntSet {
 
@@ -36,14 +37,14 @@ class BTree(rootVal: Int, left: IntSet, right: IntSet) extends IntSet {
 	override def toString: String = left.toString + rootVal.toString + right.toString
 }
 
-object hierarchy {
+object TestSet {
 
 	def CheckAndLog(a: Int, b: Int)(s: IntSet): Unit = 
 		if(a<=b) {println("Exist " + a + " in set -> " + s.contains(a)); CheckAndLog(a+1,b)(s)}
 
 	def listAndLog(name: String, s: IntSet) = println( name + "={" + s.toString + "}" )
 
-	def main = {
+	def main(args: Array[String]) = {
 
 		def test(name: String, s: IntSet) = { listAndLog(name,s); CheckAndLog(0,7)(s) }
 		
@@ -63,7 +64,5 @@ object hierarchy {
 		test("B U C", d)
 	}
 }
-
-hierarchy.main
 
 

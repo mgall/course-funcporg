@@ -1,3 +1,4 @@
+package funcprog.week02
 
 /**
  * 2. Purely Functional Sets.
